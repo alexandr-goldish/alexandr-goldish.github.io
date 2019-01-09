@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: Montserrat;
+}
+
+.wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.head_title {
+    font-size: 32px;
+}
+
+.first-card .card-image {
+    max-height: 500px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.height_p {
+    line-height: 32px;
+    font-size: 14px;
+}
+
+.icon {
+    margin: 20px 0;
+}
+
+.icon a {
+    margin-right: 20px;
+}
+
+.icon a:hover img{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+.icon img {
+    height: 18px;
+    color: #fff;
+    transition: 0.3s;
+}
+
