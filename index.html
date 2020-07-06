@@ -39,6 +39,122 @@
         </div>
     </div>
     <a href="page.html">LINK</a>
+    <script>
+          function youTubes_makeDynamic() {
+
+
+                var $ytIframes = $('iframe[src*="youtube.com"]');
+
+
+                $ytIframes.each(function (i,e) {
+
+
+                     var $ytFrame = $(e);
+
+
+                     var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
+
+
+                     var $ytLoader = $('<div class="ytLoader">');
+
+
+                     $ytLoader.append($('<img class="cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
+
+
+                     $ytLoader.append($('<img class="playBtn" src="play_button.png">'));
+
+
+                     $ytLoader.data('$ytFrame',$ytFrame);
+
+
+                     $ytFrame.replaceWith($ytLoader);
+
+
+                     $ytLoader.click(function () {
+
+
+                          var $ytFrame = $ytLoader.data('$ytFrame');
+
+
+                          $ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
+
+
+                          $ytLoader.replaceWith($ytFrame);
+
+
+                     });
+
+
+                });
+
+
+          };
+
+
+          $(document).ready(function () {youTubes_makeDynamic()});
+
+
+     </script>
+
+
+<script>
+
+
+                function youTubes_makeDynamic() {
+
+
+                        var $ytIframes = $('iframe[src*="youtube.com"]');
+
+
+                        $ytIframes.each(function (i,e) {
+
+
+                                var $ytFrame = $(e);
+
+
+                                var ytKey; var tmp = $ytFrame.attr('src').split(/\//); tmp = tmp[tmp.length - 1]; tmp = tmp.split('?'); ytKey = tmp[0];
+
+
+                                var $ytLoader = $('<div class="ytLoader">');
+
+
+                                $ytLoader.append($('<img class="cover" src="https://i.ytimg.com/vi/'+ytKey+'/hqdefault.jpg">'));
+
+
+                                $ytLoader.append($('<img class="playBtn" src="play_button.png">'));
+
+
+                                $ytLoader.data('$ytFrame',$ytFrame);
+
+
+                                $ytFrame.replaceWith($ytLoader);
+
+
+                                $ytLoader.click(function () {
+
+
+                                        var $ytFrame = $ytLoader.data('$ytFrame');
+
+
+                                        $ytFrame.attr('src',$ytFrame.attr('src')+'?autoplay=1');
+
+
+                                        $ytLoader.replaceWith($ytFrame);
+
+
+                                });
+
+
+                        });
+
+
+                };
+
+
+                $(document).ready(function () {youTubes_makeDynamic()});
+
+
+</script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js" defer></script>
     <script src="jquery-3.3.1.min.js" type="text/javascript" defer></script>
